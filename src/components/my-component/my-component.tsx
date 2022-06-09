@@ -7,6 +7,6 @@ import { Component, h } from '@stencil/core';
 })
 export class MyComponent {
   render() {
-    return <ion-button>Primary</ion-button>;
+    return <ion-button>My Button</ion-button>;
   }
 }
