@@ -2,6 +2,8 @@ import { Config } from '@stencil/core';
 
 export const config: Config = {
   namespace: 'stencil-ionic',
+  globalScript: 'src/global/app.ts',
+  // globalStyle: 'src/global/app.css',
   outputTargets: [
     {
       type: 'dist',
