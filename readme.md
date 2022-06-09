@@ -4,6 +4,7 @@ Ionic core component styles are being not applied when used in a Stencil compone
 
 # Initial setup
 `npx degit https://github.com/jacksloan/stencil-ionic-issue`
+
 `npm install`
 
 # Steps to reproduce with Stencil preview:
@@ -13,4 +14,5 @@ Ionic core component styles are being not applied when used in a Stencil compone
 
 # Steps to reproduce with dist web component
 `npm run build`
+
 `npx http-server`
