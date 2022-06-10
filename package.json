@@ -5,6 +5,11 @@
   "description": "Stencil App Starter",
   "scripts": {
     "build": "stencil build",
+    "docker:serve": "run-s docker:stop docker:rm docker:build docker:start",
+    "docker:build": "docker build -t stencil-ionic .",
+    "docker:start": "docker run -d --name stencil-ionic -p 3333:3333 stencil-ionic",
+    "docker:stop": "docker stop stencil-ionic 2> /dev/null || true",
+    "docker:rm": "docker rm stencil-ionic 2> /dev/null || true",
     "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
@@ -16,7 +21,8 @@
     "@types/jest": "^27.0.3",
     "jest": "^27.4.5",
     "jest-cli": "^27.4.5",
-    "puppeteer": "^10.0.0"
+    "npm-run-all": "^4.1.5",
+    "puppeteer": "10.4.0"
   },
   "license": "MIT",
   "dependencies": {
