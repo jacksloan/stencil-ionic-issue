@@ -10,6 +10,7 @@
     "docker:start": "docker run -d --name stencil-ionic -p 3333:3333 stencil-ionic",
     "docker:stop": "docker stop stencil-ionic 2> /dev/null || true",
     "docker:rm": "docker rm stencil-ionic 2> /dev/null || true",
+    "docker:exec": "docker exec -it stencil-ionic bash",
     "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
