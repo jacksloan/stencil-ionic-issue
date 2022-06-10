@@ -9,7 +9,14 @@ export class MyComponent {
   @Element() el: HTMLElement;
 
   constructor() {
-    // required for ionic styles to apply to nested shadow roots,
+    // when targeting for custom-elements this appears to be required for ionic styles to apply to nested shadow roots
+    //
+    // as an alternative, appending a <style> tag with the necessary css would also work
+    //    eg:
+    //        const s = document.createElement('style')
+    //        s.innerHTML = `/* ionic core styles would go here... */`
+    //        this.el.shadowRoot.prepend(s)
+    //
     const l = document.createElement('link');
     l.setAttribute('rel', 'stylesheet');
     l.setAttribute('href', 'https://cdn.jsdelivr.net/npm/@ionic/core/css/core.css');
